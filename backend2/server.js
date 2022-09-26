@@ -13,7 +13,8 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', async (req, res) => {
     res.setHeader('Content-Type', 'text/html');
     try {
-        let result = await axios.get("http://172.18.0.3:1323")
+        let result = await axios.get("http://backend1-api:1323")
+        // let result = await axios.get("http://172.18.0.3:1323")
         // let result = await axios.get("http://127.0.0.1:1323")
         return res.send(result.data)
     } catch (err) {
